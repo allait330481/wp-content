@@ -1,8 +1,5 @@
     <?php
-    /** @var string $title */
-    /** @var string $content */
-    /** @var array $buttonGroup */
-
+  
     if(!$buttonGroup){
         $buttonGroup = null;
     }
@@ -56,28 +53,32 @@
             <img src="img/jeff_koons_theskateroom_post1.jpg" alt="">
         </section>
 
-        <section class="cards" id="Categories">
-            <div class="review-home-bg">
-            <h2 class="title">Last reviews</h2>
-            <div class="content">
-                <?php foreach($listOfReviews as $review): ?>
-                <div class="card">
-            
-                    <div class="info">
-                        <h1><?php echo $review->post_title ?></h1>
-                        <p><?php echo $review->post_content ?></p>
-                        <p class="email-card"><?php echo get_field('email', $review->ID)?></p>
 
-                        <a href="<?php echo get_field('url', $review->ID)?>"><button class="button-85" role="button">Naar site</button></a>
+        <section class="projects" id="projects">
+        <h2 class="title">laatste reviews</h2>
+        <div class="content">
+        <?php foreach($listOfReviews as $review): ?>
 
-
-                    </div>
+            <div class="project-card">
+                <div class="project-image">
+                <?php $img = get_field('image', $review->ID);
+                    ?>
+                        <img src="<?php echo $img['url']; ?>" alt="">   
                 </div>
+                <div class="project-info">
+                    <p class="project-category"><?php echo $review->post_content ?></p>
+                    <strong class="project-title">
+                        <span><?php echo $review->post_title ?></span>
+                        <a href="<?php echo get_field('url', 'email', $review->ID)?>"><button class="button-85" role="button">Naar site</button></a>
+                    </strong>
+                </div>
+            </div>
 
-                <?php endforeach ?>
-            </div>
-            </div>
-        </section>
+            <?php endforeach ?>    
+        </div>
+    </section>
+
+
 
 
 

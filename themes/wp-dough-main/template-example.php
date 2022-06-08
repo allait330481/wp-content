@@ -31,28 +31,30 @@ $listOfReviews = get_posts($arguments);
 </header>
 
 
+        <section class="projects" id="projects">
+        <h2 class="title">laatste reviews</h2>
+        <div class="content">
+        <?php foreach($listOfReviews as $review): ?>
 
-<section class="cards" id="Categories">
-            <h2 class="title">Al reviews</h2>
-            <div class="content">
-                <?php foreach($listOfReviews as $review): ?>
-                <div class="card">
-                <div class="img-card">
-                    <?php $img = get_field('image', $review->ID);
+            <div class="project-card">
+                <div class="project-image">
+                <?php $img = get_field('image', $review->ID);
                     ?>
-                        <img src="<?php echo $img['url']; ?>" alt="">
-                    </div>
-                    <div class="info">
-                        <h1><?php echo $review->post_title ?></h1>
-                        <p><?php echo $review->post_content ?></p>
-                        <p class="email-card"><?php echo get_field('email', $review->ID)?></p>
-
-                        <a href="<?php echo get_field('url', 'email', $review->ID)?>"><button class="button-85" role="button">Naar site</button></a>
-                    </div>
+                        <img src="<?php echo $img['url']; ?>" alt="">   
                 </div>
+                <div class="project-info">
+                    <p class="project-category"><?php echo $review->post_content ?></p>
+                    <h2><?php echo get_field('email', $review->ID)?></h2>
 
-                <?php endforeach ?>
+                    <strong class="project-title">
+                        <span><?php echo $review->post_title ?></span>
+                        <a href="<?php echo get_field('url', 'email', $review->ID)?>"><button class="button-85" role="button">Naar site</button></a>
+                    </strong>
+                </div>
             </div>
-        </section>
+
+            <?php endforeach ?>    
+        </div>
+    </section>
 
 

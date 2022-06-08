@@ -1,13 +1,14 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <footer>
         <div class="footer-content">
             <h3>Pretpark</h3>
-            <p>Raj Template is a blog website where you will find great tutorials on web design and development. Here each tutorial is beautifully described step by step with the required source code.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio pariatur unde, deserunt iusto quis corrupti, natus explicabo architecto provident excepturi incidunt dolorem! Aspernatur est nesciunt placeat soluta veritatis aut?</p>
             <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i>
+
             </ul>
         </div>
         <div class="footer-bottom">
